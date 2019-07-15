@@ -1,0 +1,23 @@
+<view class='search'>
+  <input placeholder='搜索' bindinput='handleSearchList'></input>
+  <icon type='search' size='15'></icon>
+</view>
+
+<view class='wrap'>
+  <navigator
+    wx:for='{{ searchShops }}' 
+    url='/pages/detail/detail?item={{item.id}}'
+    class='item' 
+    wx:key='{{item.id}}'>
+    <image src='{{item.images[0]}}' mode='aspectFill'></image>
+    <view class='meta'>
+      <text class='name'>{{item.name}}</text>
+      <text class='phone'>电话:{{item.phone}}</text>
+      <text class='address'>地址:{{item.address}}</text>
+      <text class='hour'>营业时间:{{item.businessHours}}</text>
+    </view>
+    <view class='score'>评分:{{item.score}}</view>
+  </navigator>
+
+  <view class='loadMore'>Loading ……</view>
+</view>

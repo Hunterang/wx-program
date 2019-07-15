@@ -1,0 +1,20 @@
+<view class='home_container'>
+  <swiper class='swiper' current='1'>
+    <swiper-item wx:for = "{{ sliderInfo }}" wx:key="{{ item.id }}">
+      <navigator wx:if = "{{item.link}}" url='{{item.link}}'>
+        <image src='{{ item.image }}'></image>
+      </navigator>
+      <image wx:else src='{{ item.image }}'></image>
+    </swiper-item>
+  </swiper>
+  <view class='grid'>
+    <navigator class='icon-container' 
+    wx:for="{{ categories }}"
+    data-value = "{{ item.name }}"
+    url='/pages/list/list?cat={{ item.id }}'
+     wx:key="{{item.id}}">
+      <image src='{{ item.icon }}'></image>
+      <text>{{ item.name }}</text>
+    </navigator>
+  </view>
+</view>

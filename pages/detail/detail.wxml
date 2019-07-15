@@ -1,0 +1,35 @@
+<swiper class='silder'>
+  <swiper-item wx:for='{{detail.images}}' wx:key="{{*this}}">
+  <image src='{{item}}' mode='aspectFill'/>
+  </swiper-item>
+</swiper>
+
+<view>
+lunbo
+</view>
+
+<!-- <view>
+  <view class='item' wx:for="{{}}" wx:key="{{*this}}">
+  <text class=''>{{}}</text>
+  <text class=''>{{}}</text>
+  <text class=''>{{}}</text>
+  <text class=''>{{}}</text>
+  <view class='images'>
+  <image 
+  wx:for="{{item.images}}" 
+  wx:key="{{*this}}"
+  src='{{util.size(item)}}'
+   ></image>
+  </view>
+  </view>
+</view>
+
+<wxs module='util'>
+  module.exports = {
+    size: function(input) {
+    return input.replace('w.h','100*100')
+    }
+  }
+
+
+</wxs> -->
