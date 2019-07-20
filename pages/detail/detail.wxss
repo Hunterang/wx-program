@@ -1,1 +1,44 @@
 /* pages/detail/detail.wxss */
+page {
+  background: #efefef;
+}
+swiper {
+  width: 750rpx; 
+  height: 380rpx;
+  overflow: hidden;
+}
+swiper image {
+
+  display: inline-block;
+  width: 750rpx !important;
+  height:380rpx;
+}
+.show-info {
+  overflow: hidden;
+  background: #fff;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.show-info text {
+  display:  inline-block;
+}
+.name {
+  width: 100%;
+}
+.item {
+  overflow: hidden;
+  padding:  0 20rpx;
+  box-sizing: border-box;
+  border-top: 1rpx solid #333;
+  background: #fff;
+}
+.item text {
+  display: inline-block;
+  width: 100%;
+}
+.images {
+  width: 750rpx;
+  display: flex;
+  height: 100rpx;
+  align-items: center
+}

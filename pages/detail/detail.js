@@ -3,6 +3,7 @@ let  { request } = require("../../utils/index.js")
 Page({
 
   data: {
+    indicatorDots: true,
     detail: []
   },
 

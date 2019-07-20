@@ -1,25 +1,30 @@
-<swiper class='silder'>
-  <swiper-item wx:for='{{detail.images}}' wx:key="{{*this}}">
+<swiper class='silder' indicator-dots="{{indicatorDots}}">
+  <swiper-item wx:for='{{detail.images}}' wx:key="{{this}}">
   <image src='{{item}}' mode='aspectFill'/>
   </swiper-item>
 </swiper>
+<view class='tips'>店铺详情</view>
+<view class='show-info'>
 
-<view>
-lunbo
+  <text class='name'>名称: {{detail.name}}</text>
+  <text class='phone'>电话: {{detail.phone}}</text>
+  <text class='address'>地址: {{detail.address}}</text>
+  <text class='businessHours'>营业时间: {{detail.businessHours}}</text>
 </view>
-
-<!-- <view>
-  <view class='item' wx:for="{{}}" wx:key="{{*this}}">
-  <text class=''>{{}}</text>
-  <text class=''>{{}}</text>
-  <text class=''>{{}}</text>
-  <text class=''>{{}}</text>
-  <view class='images'>
-  <image 
-  wx:for="{{item.images}}" 
-  wx:key="{{*this}}"
-  src='{{util.size(item)}}'
-   ></image>
+ 
+<view claas='comment' >
+  <view class='tips'>评论</view>
+  <view class='item' wx:for="{{detail.comments}}" wx:key="{{this}}">
+    <text class='comment'>{{item.content}}</text>
+    <text class='date'>{{item.data}}</text>
+    <text class='rating'>{{item.rating}}</text>
+    <text class='nicName'>{{item.name}}</text>
+    <view class='images'>
+    <image 
+    wx:for="{{item.images}}" 
+    wx:key="{{this}}"
+    src='{{util.size(item)}}'
+    ></image>
   </view>
   </view>
 </view>
@@ -32,4 +37,4 @@ lunbo
   }
 
 
-</wxs> -->
+</wxs>
